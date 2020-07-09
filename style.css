@@ -1,0 +1,20 @@
+.cont{
+    border: 1px solid green;
+    margin: 5px;
+    background-color: white;
+}
+.newscont{
+    border: 1px solid green;
+    margin: 5px;
+    background-color: wheat;
+}
+button{
+    padding: 15px;
+    font-size: 24px;
+}
+.edit{
+    background-color: green;
+}
+.delete{
+    background-color: red;
+}

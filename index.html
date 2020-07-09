@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+    
+   
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+    class Hotnews extends React.Component{
+
+      constructor(props){
+        super(props);
+        
+        this.state={totaleditcount:0};
+       
+        
+        
+      }
+      edit(){
+        alert("Edit button click");
+        this.setState({
+
+          totaleditcount:this.state.totaleditcount+1
+        });
+      }
+      delete(){
+        alert("Delete button click");
+      
+      }
+    
+        render(){
+            const props=this.props;
+            const totaleditcount=this.state.totaleditcount;
+            return (
+                <div className="newscont">
+                <img src="data:image/jpeg;base64,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"/>
+                <span> {props.children}</span>
+                <div className="action">
+                <button className="edit" onClick={ ()=>this.edit()}>Edit</button>
+                <button className="delete" onClick={this.delete}>Delete</button>
+             
+               
+                </div>
+                { !!totaleditcount && <p>Totla edit Count= {this.state.totaleditcount}</p>}
+                </div>
+            )
+
+            
+
+        }
+    }
+
+      ReactDOM.render(
+          <div className="cont">
+        <Hotnews>Flowers One </Hotnews>
+        <Hotnews>Flowers Two</Hotnews>
+       
+     
+        </div>,
+        document.getElementById('root')
+      );
+
+    </script>
+
+  </body>
+</html
